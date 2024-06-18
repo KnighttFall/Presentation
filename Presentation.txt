@@ -1,0 +1,97 @@
+ Slide 2: Introduction to the String Class 
+-  Content :
+  -  Definition : String classes are data structures that represent sequences of characters and provide methods for manipulating text, including concatenation, comparison, and searching.
+  -  Immutable Nature : String objects are immutable, meaning once created, their values cannot be changed.
+
+ Follow-up Questions and Answers :
+1.  Q : What does it mean for a string to be immutable?
+    A : An immutable string means that once a string object is created, it cannot be altered. Any modification creates a new string object.
+
+2.  Q : Why are strings made immutable in Java?
+    A : Strings are immutable for security, synchronization, and performance reasons. They provide safe and efficient handling of string literals.
+
+ Slide 3: Common String Methods 
+-  Content :
+  - `length()`
+  - `charAt(int index)`
+  - `substring(int beginIndex, int endIndex)`
+  - `indexOf(String str)`
+  - `toUpperCase()`, `toLowerCase()`
+  - `trim()`
+
+ Follow-up Questions and Answers :
+1.  Q : What does the `charAt()` method do?
+    A : The `charAt()` method returns the character at a specified index in the string.
+
+2.  Q : How do you find the length of a string in Java?
+    A : You can find the length of a string using the `length()` method.
+
+ Slide 4: String Manipulation Examples 
+-  Content : Examples of string manipulations such as concatenation, comparison, and searching.
+
+ Follow-up Questions and Answers :
+1.  Q : How do you concatenate two strings in Java?
+    A : You can concatenate two strings using the `+` operator or the `concat()` method.
+
+2.  Q : How can you compare two strings for equality?
+    A : You can compare two strings using the `equals()` method.
+
+ Slide 5: String Pool Concept 
+-  Content :
+  -  Definition : The String Pool is a special memory region in the Java heap used to store string literals.
+  -  Mechanism : When a string literal is created, the JVM checks the pool; if the string exists, it returns the reference; otherwise, it adds the string to the pool.
+  -  Benefits : String interning helps save memory by avoiding the creation of multiple instances of identical strings and improves performance due to faster comparisons.
+
+ Follow-up Questions and Answers :
+1.  Q : What is the string pool?
+    A : The string pool is a special memory area in the Java heap where string literals are stored to save memory and enhance performance.
+
+2.  Q : How does string interning work?
+    A : String interning stores only one copy of each distinct string value, which must be immutable.
+
+ Slide 6: Introduction to StringBuffer and StringBuilder 
+-  Content :
+  -  Definition : Mutable sequences of characters.
+  -  Difference : 
+    -  String : Immutable.
+    -  StringBuffer : Mutable, thread-safe (synchronized).
+    -  StringBuilder : Mutable, not thread-safe (faster for single-threaded applications).
+
+ Follow-up Questions and Answers :
+1.  Q : What is the primary difference between `StringBuffer` and `StringBuilder`?
+    A : `StringBuffer` is synchronized and thread-safe, while `StringBuilder` is not synchronized and is faster in single-threaded contexts.
+
+2.  Q : When should you use `StringBuilder` over `StringBuffer`?
+    A : Use `StringBuilder` when working in a single-threaded environment for better performance.
+
+ Slide 7: Common Methods of StringBuffer and StringBuilder 
+-  Content :
+  - `append()`
+  - `insert()`
+  - `reverse()`
+  - `delete()`
+  - `capacity()`
+  - `ensureCapacity()`
+
+ Follow-up Questions and Answers :
+1.  Q : What does the `append()` method do?
+    A : The `append()` method adds a specified string to the end of the current sequence.
+
+2.  Q : How can you delete a sequence of characters from a `StringBuffer` or `StringBuilder`?
+    A : Use the `delete()` method to remove a sequence of characters.
+
+ Slide 8: Sample Java Code for StringBuffer and StringBuilder 
+-  Content : Include example code demonstrating usage of `StringBuffer` and `StringBuilder`.
+
+ Follow-up Questions and Answers :
+1.  Q : Can you show a simple example of using `StringBuilder` to construct a string?
+    A : 
+   ```java
+   StringBuilder sb = new StringBuilder();
+   sb.append("Hello");
+   sb.append(" World");
+   System.out.println(sb.toString());
+   ```
+
+2.  Q : How do you ensure the capacity of a `StringBuffer`?
+    A : Use the `ensureCapacity()` method to set the minimum capacity.
